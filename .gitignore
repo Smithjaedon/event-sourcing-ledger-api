@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environment
+.venv/
+
+# Environment
+.env
+
+# Lint cache
+.ruff_cache/
+
+# OS
+.DS_Store
