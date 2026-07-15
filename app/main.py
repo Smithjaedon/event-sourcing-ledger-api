@@ -26,6 +26,8 @@ async def lifespan(_app: FastAPI):
 
 
 # from app.routers import
+from app.routes.events import route as events
+from app.routes.accounts import route as accounts
 # from app.ws.connections import router as ws
 
 load_dotenv()
@@ -69,4 +71,6 @@ async def conflict_error_handler(_request: Request, exc: ConflictError):
 
 app.include_router(auth)
 
+app.include_router(accounts)
+app.include_router(events)
 # --- router marker ---
