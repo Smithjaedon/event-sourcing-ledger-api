@@ -26,8 +26,11 @@ async def lifespan(_app: FastAPI):
 
 
 # from app.routers import
+from app.routes.users import route as users
 from app.routes.events import route as events
 from app.routes.accounts import route as accounts
+from app.routes.users import route as users
+from app.routes.users import route as users
 # from app.ws.connections import router as ws
 
 load_dotenv()
@@ -73,4 +76,6 @@ app.include_router(auth)
 
 app.include_router(accounts)
 app.include_router(events)
+app.include_router(users)
+app.include_router(users)
 # --- router marker ---
